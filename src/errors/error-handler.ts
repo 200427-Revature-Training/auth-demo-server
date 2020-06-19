@@ -3,6 +3,7 @@ export const errorHandler = (err, req, res, next) => {
     if (err instanceof HttpError) {
         res.sendStatus(err.status);
     } else {
+        console.log(err);
         res.sendStatus(500);
     }
 }
